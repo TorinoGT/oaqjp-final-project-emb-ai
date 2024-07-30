@@ -30,13 +30,13 @@ def sent_analyzer():
         else:
             # Return a formatted string with the sentiment label and score
             #return "The given text has been identified as {} with a score of {}.".format(label.split('_')[1], score)
-            return f"For the given statement, the system response is:\n"\
-                   f"anger : {anger}\n"\
-                   f"disgust: {disgust}\n"\
-                   f"fear : {fear}\n"\
-                   f"joy : {joy}\n"\
-                   f"sadness : {sadness}\n"\
-                   f"The dominant emotion is {dominant_emotion}"
+            return "For the given statement, the system response is:<br />\
+                     Anger : {}<br />\
+                     Disgust: {}<br />\
+                     Fear : {}<br />\
+                     Joy : {}<br />\
+                     Sadness : {}<br />\
+                     The dominant emotion is: {}".format(anger,disgust,fear,joy,sadness,dominant_emotion)
 
 @app.route("/")
 def render_index_page():
